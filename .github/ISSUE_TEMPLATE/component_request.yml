@@ -1,0 +1,79 @@
+name: Component request
+description: Ask for a new component, or a new example or template in the Kitchen Sink.
+title: "[Component]: "
+labels: ["component request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want a component NativePHP UI doesn't have yet, or a better example of one it does? Tell us about it.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you requesting?
+      options:
+        - A new component for NativePHP UI (a new `<ui:*>` tag)
+        - A new example for an existing component
+        - A new template (a complete screen)
+        - A change to an existing component
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Component or template name
+      placeholder: Date range picker / <ui:stepper> / Checkout screen
+    validations:
+      required: true
+
+  - type: input
+    id: shadcn
+    attributes:
+      label: shadcn/ui reference
+      description: If it exists in shadcn/ui, a link to it.
+      placeholder: https://ui.shadcn.com/docs/components/…
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What would you use it for?
+      description: The screen or problem you have in mind.
+    validations:
+      required: true
+
+  - type: textarea
+    id: api
+    attributes:
+      label: How should it work?
+      description: How you'd like to write it in Blade, and how it should behave. A sketch is fine.
+      render: blade
+      placeholder: |
+        <ui:stepper native:model="step">
+            <ui:stepper-item value="account">Account</ui:stepper-item>
+            <ui:stepper-item value="payment">Payment</ui:stepper-item>
+        </ui:stepper>
+
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: Platforms
+      multiple: true
+      options:
+        - Android
+        - iOS
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Screenshots or references
+      description: Designs, screenshots from other apps, or links that show what you mean.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I checked the [documentation](https://nativephp-ui.codingwithrk.com) and existing issues, and this isn't already available or requested.
+          required: true

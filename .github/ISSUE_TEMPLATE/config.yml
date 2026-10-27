@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/codingwithrk/nativephp-ui-kitchen-sink/security/advisories/new
+    about: Please report security issues privately, never in a public issue.
+  - name: NativePHP UI documentation
+    url: https://nativephp-ui.codingwithrk.com
+    about: Usage, props and examples for every <ui:*> component.
+  - name: Bug inside a NativePHP UI component
+    url: https://marketplace.codingwithrk.com/products/nativephp-ui
+    about: Problems with how a <ui:*> tag itself renders or behaves go to the plugin's support at connect@codingwithrk.com.

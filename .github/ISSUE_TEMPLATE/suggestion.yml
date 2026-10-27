@@ -1,0 +1,55 @@
+name: Suggestion
+description: An idea to make the Kitchen Sink app, its docs or its developer experience better.
+title: "[Suggestion]: "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea? We'd love to hear it. For a new component, use the **Component request** template instead.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is it about?
+      options:
+        - App design and navigation
+        - Themes
+        - Templates
+        - Documentation / README
+        - Developer experience (setup, tests, tooling)
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: What's missing, confusing or harder than it should be?
+      placeholder: It's hard to compare how a component looks in light and dark mode…
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your suggestion
+      description: What you'd like to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to help build it?
+      options:
+        - "Yes, I'd like to open a pull request"
+        - Maybe, with some guidance
+        - No, just suggesting
